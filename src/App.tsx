@@ -4,6 +4,7 @@ import Slider from './components/Slider';
 import Products from './components/Products';
 import { Route , Routes } from "react-router-dom";
 import About from './components/about';
+import Profile from './components/Profile';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             </>} />
 
             <Route path='about' element={<About />}/>
+            <Route path='profile' element={<Profile />}/>
         </Routes>
 
 
