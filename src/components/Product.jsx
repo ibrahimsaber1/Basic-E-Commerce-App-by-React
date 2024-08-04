@@ -1,5 +1,5 @@
 function Product(props) {
-  console.log(props); // Corrected console log
+  // console.log(props); // Corrected console log
 
   // Destructure props for cleaner code
   const { images, title, price, description } = props.product;

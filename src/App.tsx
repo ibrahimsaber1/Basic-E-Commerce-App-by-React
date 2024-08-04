@@ -5,6 +5,7 @@ import Products from './components/Products';
 import { Route , Routes } from "react-router-dom";
 import About from './components/about';
 import Profile from './components/Profile';
+import ProductDetailes from './ProductDetailes';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
             <Route path='about' element={<About />}/>
             <Route path='profile' element={<Profile />}/>
+            <Route path='product/:productId' element={<ProductDetailes />}/>
         </Routes>
 
 
