@@ -1,8 +1,8 @@
-function Product(props) {
-  // console.log(props); // Corrected console log
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
+function Product(props) {
   // Destructure props for cleaner code
-  const { images, title, price, description } = props.product;
+  const { id, images, title, price, description } = props.product;
 
   return (
     <>
@@ -20,6 +20,7 @@ function Product(props) {
           <button className="btn btn-primary" aria-label={`More details about ${title}`}>
             Add to cart
           </button>
+          <Link className="btn btn-primary m-3" to={`/product/${id}`}>Details</Link> {/* Corrected Link */}
         </div>
       </div>
     </>
