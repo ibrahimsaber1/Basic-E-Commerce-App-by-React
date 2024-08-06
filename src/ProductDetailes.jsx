@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import './App'
 
 function ProductDetails() {
     const params = useParams();
@@ -13,7 +14,15 @@ function ProductDetails() {
     }, [params.productId]);
 
     return (
-        <h1>Product Details: {product.title} (ID: {params.productId})</h1>
+        <div className="pro_ditales">
+            <h1>Product Details: (ID: {params.productId})</h1>
+            {product.images && product.images.length > 0 && (
+                <img src={product.images[0]} className="card-img-top" height={400} width={200} alt={product.title}/>
+            )}
+            <h4>{product.title}</h4>
+            <h4>${product.price}</h4>
+            <h6>{product.description}</h6>
+        </div>
     );
 }
 
